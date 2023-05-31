@@ -13,10 +13,9 @@ a{
     text-decoration: none;
 }
 .container{
-    min-height: 100vh;
+    min-height: 70vh;
     width: 100%;
     display: flex;
-
     align-items: center;
     justify-content: center;
 }
@@ -96,7 +95,7 @@ p{
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    max-width: 1300px;
+    max-width: 1500px;
     padding: 0 10px;
 }
 #header .nav-list ul{
@@ -150,8 +149,6 @@ p{
 #header .hamburger{
     height: 60px;
     width: 60px;
-    display: inline-block;
-    border: 3px solid white;
     border: 3px solid white;
     border-radius: 50%;
     position: relative;
@@ -207,10 +204,10 @@ p{
 
 /*Hero Section*/
 #hero{
-    background-image: url("./img/Dariusz Szmyciński 102 full res.jpg");
+    background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url("./img/Dariusz Szmyciński 102 full res.jpg") no-repeat top center;
     background-size: cover;
-    background-position: top center;
     position: relative;
+    height: 200vw;
 }
 #hero::after{
     position: absolute;
@@ -225,9 +222,10 @@ p{
 #hero .hero{
     flex-flow: row wrap;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 0 50px;
     justify-content: flex-start;
+    display: inline-block;
+    margin: 200px auto 0;
 }
 #hero h1{
     display: block;
@@ -267,29 +265,111 @@ p{
 #hero h1:nth-child(5) span{
     animation-delay: 2.5s;
 }
+#hero p{
+    padding: 50px;
+    color: white;
+    width: 100%;
+    max-width: 700px;
+    font-size: 2rem;
+    font-weight: 300;
+}
 /*EndHero Section*/
 
-/*Services Section*/
-#services{}
-#services .services{
+/*Experience section*/
+#experience .experience{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#experience .experience-header h1{
+    margin-bottom: 50px;
+}
+#experience .all-experience{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#experience .experience-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#experience .experience-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: lightsteelblue ;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    color: white;
+}
+#experience .experience-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+#experience .experience-info h2{
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+#experience .experience-info p{
+    color: white;
+}
+#experience .experience-img{
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#experience .experience-img:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: .5;
+}
+#experience .experience-img img{
+    transition: .3s ease transform;
+}
+#experience .experience-item:hover .experience-img img{
+    transform: scale(1.1);
+}
+/*End experience section*/
+
+/*Skills Section*/
+#skills{}
+#skills .skills{
     flex-direction: column;
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
     padding: 100px 0;
 }
-#services .service-top{
+#skills .skill-top{
     max-width: 500px;
     margin: 0 auto;
 }
-#services .service-bottom{
+#skills .skill-bottom{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 50px;
 }
-#services .service-item{
+#skills .skill-item{
     flex-basis: 80%;
     display: flex;
     align-items: flex-start;
@@ -303,8 +383,9 @@ p{
     position: relative;
     z-index: 1;
     overflow: hidden;
+    height: 400px;
 }
-#services .service-item::after{
+#skills .skill-item::after{
     content: '';
     position: absolute;
     left: 0;
@@ -315,97 +396,47 @@ p{
     opacity: .9;
     z-index: -1;
 }
-#services .service-bottom .icon{
+#skills .skill-bottom .icon{
     height: 80px;
     width: 80px;
     margin-bottom: 20px;
 }
-#services .service-item h2{
+#skills .skill-item h2{
     font-size: 2rem;
     color: white;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
-#services .service-item p{
+#skills .skill-item p{
     color: white;
     text-align: left;
 }
 
-/*End Services Section*/
+/*End Skills Section*/
 
-/*Projects section*/
-#projects .projects{
+/*Education Section*/
+#education .education{
     flex-direction: column;
+    text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 30px 20px;
 }
-#projects .projects-header h1{
-    margin-bottom: 50px;
-}
-#projects .all-projects{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-#projects .project-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 80%;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-#projects .project-info{
-    padding: 30px;
-    flex-basis: 50%;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    background-color: lightsteelblue ;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    color: white;
-}
-#projects .project-info h1{
-    font-size: 4rem;
-    font-weight: 500;
-}
-#projects .project-info h2{
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-top: 10px;
-}
-#projects .project-info p{
-    color: white;
-}
-#projects .project-img{
-    flex-basis: 50%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-}
-#projects .project-img:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
+
+#education .col-left{
     width: 100%;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    opacity: .7;
+    margin-bottom: 30px;
 }
-#projects .project-img img{
-    transition: .3s ease transform;
+#education .col-left h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
 }
-#projects .project-item:hover .project-img img{
-    transform: scale(1.1);
+#education .col-left p{
+    margin-bottom: 20px;
 }
-/*End Projects section*/
+
+/*End education Section*/
 
 /*About Section*/
 #about .about{
@@ -413,7 +444,7 @@ p{
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 50px 20px;
 }
 #about .col-left{
     width: 250px;
@@ -482,8 +513,7 @@ p{
 }
 #contact .icon{
     width: 72px;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
 }
 #contact .contact-info h1{
     font-size: 2.5rem;
@@ -587,33 +617,46 @@ p{
     }
     /*End Hero*/
 
-    /*Service section*/
-    #services .service-bottom .service-item{
+    /*Skill section*/
+    #skills .skill-bottom .skill-item{
         flex-basis: 45%;
         margin: 1.5%;
     }
-    /*End Service section*/
+    /*End Skill section*/
 
-    /*Project section*/
-    #projects .project-item{
+    /*Experience section*/
+    #experience .experience-item{
         flex-direction: row;
     }
-    #projects .project-item:nth-child(even){
+    #experience .experience-item:nth-child(even){
         flex-direction: row-reverse;
     }
-    #projects .project-item{
+    #experience .experience-item{
         height: 400px;
         margin: 0;
         width: 100%;
         border-radius: 0;
     }
-    #projects .all-projects .project-info{
+    #experience .all-experience .experience-info{
         height: 100%;
     }
-    #projects .all-projects .project-img{
+    #experience .all-experience .experience-img{
         height: 100%;
     }
-    /*End Project section*/
+    /*End experience section*/
+
+    /*Education section*/
+    #education .education{
+        flex-direction:  row;
+    }
+    #education .col-left{
+        text-align: left;
+        padding: 30px;
+    }
+    #education .col-left h1{
+        text-align: left;
+    }
+    /*End education section*/
 
     /*About section*/
     #about .about{
@@ -643,7 +686,7 @@ p{
     /*Contact section*/
     #contact .contact{
         flex-direction: column;
-        padding: 100px 0;
+        padding: 20px 0;
         align-items: center;
         justify-content: center;
         min-width: 20vh;
@@ -699,7 +742,10 @@ p{
         display: none;
     }
     /*End Header*/
-    #services .service-bottom .service-item {
+    #hero{
+        height: 70vw;
+    }
+    #skills .skill-bottom .skill-item {
         flex-basis: 22%;
         margin: 1.5%;
     }
