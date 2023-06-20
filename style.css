@@ -47,24 +47,24 @@ p{
     text-align: center;
 }
 .section-title span{
-    color: dodgerblue;
+    color: steelblue;
 }
 .cta{
     display: inline-block;
-    padding: 10px 30px;
+    padding: 10px 10px;
     color: white;
     background-color: transparent;
-    border: 2px solid dodgerblue;
+    border: 2px solid steelblue;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
-    margin-top: 30px;
+    margin-top: 10px;
     transition: .3s ease background-color;
     transition-property: background-color, color;
 }
 .cta:hover{
     color: white;
-    background-color: dodgerblue;
+    background-color: steelblue;
 }
 .brand h1{
     font-size: 3rem;
@@ -72,7 +72,7 @@ p{
     color: white;
 }
 .brand h1 span{
-    color: dodgerblue;
+    color: steelblue;
 }
 
 /*Header section*/
@@ -144,7 +144,7 @@ p{
     letter-spacing: initial;
 }
 #header .nav-list ul li:hover a{
-    color: dodgerblue;
+    color: steelblue;
 }
 #header .hamburger{
     height: 60px;
@@ -245,6 +245,7 @@ p{
 #hero h1:nth-child(5){
     animation: text_reveal_name .5s ease forwards;
     animation-delay: 3s;
+    margin-bottom: 50px;
 }
 #hero h1 span{
     position: absolute;
@@ -252,7 +253,7 @@ p{
     left: 0;
     height: 100%;
     width: 0;
-    background-color: dodgerblue;
+    background-color: steelblue;
     animation: text_reveal_box 1s ease;
     animation-delay: .3s;
 }
@@ -265,12 +266,16 @@ p{
 #hero h1:nth-child(5) span{
     animation-delay: 2.5s;
 }
+#hero .buttons{
+    display: inline-grid;
+}
 #hero p{
-    padding: 30px;
+    margin-top: 50px;
+    padding: 20px;
     color: white;
     width: 100%;
     max-width: 700px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 300;
 }
 /*EndHero Section*/
@@ -481,7 +486,7 @@ p{
     top: 19px;
     height: 98%;
     width: 98%;
-    border: 7px solid dodgerblue;
+    border: 7px solid steelblue;
     z-index: -1;
 }
 /*End About Section*/
@@ -595,7 +600,7 @@ p{
 }
 @keyframes text_reveal_name {
     100%{
-        color: dodgerblue;
+        color: steelblue;
         font-weight: 700;
     }
 }
@@ -672,7 +677,7 @@ p{
         top: 34px;
         height: 98%;
         width: 98%;
-        border: 10px solid dodgerblue;
+        border: 10px solid steelblue;
     }
     #about .col-right{
         text-align: left;
